@@ -89,7 +89,7 @@ EOF
 
 echo "===== Start up ====="
 sudo systemctl start chainflip-node
-sudo systemctl status chainflip-node
+#sudo systemctl status chainflip-node
 sudo systemctl enable chainflip-node
 tail -f /var/log/chainflip-node.log
 
@@ -99,7 +99,7 @@ break
 "Start Engine")
 
 sudo systemctl start chainflip-engine
-sudo systemctl status chainflip-engine
+#sudo systemctl status chainflip-engine
 sudo systemctl enable chainflip-engine
 tail -f /var/log/chainflip-engine.log
 
