@@ -118,6 +118,8 @@ sudo chainflip-cli --config-path /etc/chainflip/config/Default.toml activate
 sudo chainflip-cli --config-path /etc/chainflip/config/Default.toml rotate
 sudo chainflip-cli --config-path /etc/chainflip/config/Default.toml vanity-name $node_name
 
+sudo systemctl restart chainflip-engine
+
 break
 ;;
 
