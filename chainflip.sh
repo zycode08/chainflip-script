@@ -48,7 +48,7 @@ echo -e "\n" >> keys.txt
 echo -n "$eth_key" |  sudo tee /etc/chainflip/keys/ethereum_key_file
 
 echo "======== Signing Key ========" >> keys.txt
-SECRET_SEED=chainflip-node key generate | tee -a keys.txt | grep "Secret seed" | sed -e 's/  Secret seed:       //'
+SECRET_SEED=$(chainflip-node key generate | tee -a keys.txt | grep "Secret seed" | sed -e 's/  Secret seed:       //')
 echo -n "${SECRET_SEED:2}" | sudo tee /etc/chainflip/keys/signing_key_file
 echo -e "\n" >> keys.txt
 
